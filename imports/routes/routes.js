@@ -1,5 +1,5 @@
-import { Meteor } from 'meteor/meteor';
 import React from 'react';
+import { Meteor } from 'meteor/meteor';
 import { Router, Route, browserHistory } from 'react-router';
 
 import Login from '../ui/Login';
