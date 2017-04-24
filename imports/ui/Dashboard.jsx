@@ -6,7 +6,7 @@ import NoteList from './NoteList';
 export default () => {
   return(
     <div>
-      <PrivateHeader title="Dashboard" />
+      <PrivateHeader title="dashboard" />
       <div className="wrapper">
         <NoteList />
       </div>

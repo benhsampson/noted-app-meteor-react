@@ -5,7 +5,7 @@ import moment from 'moment';
 const NoteListItem = (props) => {
   return (
     <div>
-      <h5>{ props.note.title || 'Untitled Note'}</h5>
+      <h4>{ props.note.title || 'Untitled Note'}</h4>
       <p>{ moment(props.note.updatedAt).fromNow() }</p>
     </div>
   );

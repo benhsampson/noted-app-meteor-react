@@ -12,7 +12,7 @@ if (Meteor.isClient) {
       const updatedAt = 1492933629491;
       const wrapper = mount(<NoteListItem note={ { title, updatedAt } } />);
 
-      expect(wrapper.find('h5').text()).toBe(title);
+      expect(wrapper.find('h4').text()).toBe(title);
       expect(wrapper.find('p').length).toNotBe(0);
     });
 
@@ -21,7 +21,7 @@ if (Meteor.isClient) {
       const updatedAt = 1492933629491;
       const wrapper = mount(<NoteListItem note={ { title, updatedAt } } />);
 
-      expect(wrapper.find('h5').text()).toBe('Untitled Note');
+      expect(wrapper.find('h4').text()).toBe('Untitled Note');
     });
   });
 }
