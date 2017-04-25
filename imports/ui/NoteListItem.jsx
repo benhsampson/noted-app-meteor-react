@@ -10,6 +10,7 @@ export const NoteListItem = (props) => {
       props.Session.set('selectedNoteId', props.note._id)
     } }>
       <h4>{ props.note.title || 'Untitled Note'}</h4>
+      { props.note.selected ? 'selected' : undefined }
       <p>{ moment(props.note.updatedAt).fromNow() }</p>
     </div>
   );
