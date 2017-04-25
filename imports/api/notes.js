@@ -18,13 +18,16 @@ Meteor.methods({
       throw new Meteor.Error('not-authorized');
     }
 
-    return Notes.insert({
+    const note = Notes.insert({
       _id: shortid.generate(),
       title: '',
       body: '',
       userId: this.userId,
+      createdAt: moment().valueOf(),
       updatedAt: moment().valueOf()
     });
+
+    return note;
   },
 
   'notes.remove'(_id) {
