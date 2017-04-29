@@ -31,7 +31,6 @@ export class Editor extends Component {
             placeholder="note body"
             onChange={ this.handleBodyChange.bind(this) }>
           </textarea>
-          <button>delete note</button>
         </div>
       );
     } else {
