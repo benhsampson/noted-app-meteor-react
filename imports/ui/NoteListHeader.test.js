@@ -7,9 +7,9 @@ import { NoteListHeader } from './NoteListHeader';
 
 if (Meteor.isClient) {
   describe('NoteListHeader', function() {
-    it('should call meteorCall on click', function() {
+    it('should call on click', function() {
       const spy = expect.createSpy();
-      const wrapper = mount(<NoteListHeader meteorCall={ spy } />);
+      const wrapper = mount(<NoteListHeader call={ spy } />);
 
       wrapper.find('button').simulate('click');
 
