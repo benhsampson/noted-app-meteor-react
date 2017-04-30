@@ -7,7 +7,11 @@ import { Session } from 'meteor/session';
 export const NoteListHeader = (props) => {
   return (
     <button onClick={ () => {
-      props.call('notes.insert');
+      props.call('notes.insert', (err, res) => {
+        if (res) {
+          props.Session.set('selectedNoteId', res);
+        }
+      });
     } }>add note</button>
   );
 };
